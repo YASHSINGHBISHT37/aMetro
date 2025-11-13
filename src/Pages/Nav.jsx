@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 const Nav = () => {
     const [menu, setMenu] = useState(false)
     return (
-        <div className='bg-[#161616] w-full h-14 fixed top-0 left-0 p-2 flex justify-between items-center z-9999'>
+        <div className='bg-[#161616] w-full h-14 fixed top-0 left-0 p-2 flex justify-between items-center z-99999'>
 
             <div className='w-full h-full flex justify-between items-center'>
                 <div className='w-full h-full flex items-center'>

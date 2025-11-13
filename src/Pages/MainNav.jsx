@@ -9,7 +9,7 @@ const MainNav = () => {
         { label: 'Menu', img: 'menu.png', imgBold: 'menuBold.png' },
     ]
     return (
-        <div className='bg-blue-00 w-full z-99999 h-auto fixed bottom-0 left-0'>
+        <div className='bg-blue-00 w-full z-9999 h-auto fixed bottom-0 left-0'>
 
             <div className='flex justify-between items-center backdrop-blur-[0vh] bg-gradient-to-b from-transparent via-[#161616]/80 to-[#161616] bg-[#161616] py-2 px-6'>
                 {btns.map((btn, i) => (
