@@ -1,0 +1,13 @@
+[
+  { "line": "Red Line", "color": "#FF0000" },
+  { "line": "Yellow Line", "color": "#FFD700" },
+  { "line": "Blue Line", "color": "#0000FF" },
+  { "line": "Green Line", "color": "#008000" },
+  { "line": "Violet Line", "color": "#8F00FF" },
+  { "line": "Orange Line (Airport Express)", "color": "#FFA500" },
+  { "line": "Magenta Line", "color": "#C2185B" },
+  { "line": "Pink Line", "color": "#E91E63" },
+  { "line": "Grey Line", "color": "#808080" },
+  { "line": "Rapid Metro (RMGL)", "color": "#A9A9A9" },
+  { "line": "Aqua Line (Noida)", "color": "#00BFFF" }
+]
