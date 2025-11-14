@@ -1,60 +1,64 @@
 import React from 'react'
+import metroData from '../../../public/Data/metroData.json'
+import metroColors from '../../../public/Data/metroColors.json'
 
 const Route = () => {
-    const metroLines = [
-        // 🟡 Yellow Line
-        { name: "Samaypur Badli", time: "13:10", color: "#FFD700", lineColorName: "Yellow Line" },
-        { name: "Kashmere Gate", time: "13:25", color: "#FFD700", lineColorName: "Yellow Line" },
-        { name: "Rajiv Chowk", time: "13:30", color: "#FFD700", lineColorName: "Yellow Line" },
-
-        // 🟣 Violet Line
-        { name: "Mandi House", time: "13:35", color: "#8A2BE2", lineColorName: "Violet Line" },
-        { name: "Central Secretariat", time: "13:40", color: "#8A2BE2", lineColorName: "Violet Line" },
-        
-        { name: "Khan Market", time: "13:45", color: "#8A2BE2", lineColorName: "Violet Line" },
-
-        // 🔵 Blue Line
-        { name: "Indraprastha", time: "13:50", color: "#0074D9", lineColorName: "Blue Line" },
-        { name: "Yamuna Bank", time: "13:55", color: "#0074D9", lineColorName: "Blue Line" },
-        { name: "Akshardham", time: "14:00", color: "#0074D9", lineColorName: "Blue Line" },
-    ]
 
     return (
-        <div className="relative mt-5 pt-6">
-            <div className="Bar w-92 h-[0.1vh] bg-white/20 absolute top-0 left-1/2 -translate-x-1/2"></div>
-            {metroLines.map((station, i) => {
+        <div className="relative mt-">
+            {metroData.map((line) => (
+                <div key={line.line} className='space-y-5 pt-4 pb-2'>
 
-                const nextStation = metroLines[i + 1]
-                const isLast = i === metroLines.length - 1
-                const isInterchange = nextStation && nextStation.lineColorName !== station.lineColorName
 
-                return (
-                    <div key={i}>
-
-                        <div className='flex justify-between'>
-                            <div className='flex items-center gap-4 ml-10 mb-1 relative'>
-                                <div style={{ backgroundColor: station.color }} className='w-4 h-4 rounded-full relative'>
-                                    <div style={{ backgroundColor: station.color }} className={`Line w-[0.2vh] absolute top-1/2 left-1/2 -translate-x-1/2 ${nextStation ? 'h-6' : ''}`}></div>
-                                    <div className={`bg-[#161616] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1.5vh] h-[1.5vh] rounded-full ${i === 0 ? 'bg-transparent' : ''} ${i === metroLines.length - 1 ? 'bg-transparent' : ''}`}></div>
-                                </div>
-                                <p>{station.name}</p>
+                    <div className='flex justify-around gap-0-2'>
+                        {line.details.map((detail, i) => (
+                            <div key={i} className='-space-y-1 flex flex-col items-center w-20'>
+                                <h1 className='font-bold text-[2.2vh]'>{detail.data}</h1>
+                                <p className='opacity-70 text-[1.6vh]'>{detail.label}</p>
                             </div>
+                        ))}
+                    </div>
 
-                            {/* <div className='text-right pt-'>
-                                <span style={{ color: station.color, backgroundColor: `${station.color}20`, }} className='w-auto border border-white/30 rounded-2xl mb-1 bg-gray-400/14 font-bold px-2 text-[1.4vh]'>{station.lineColorName}</span>
-                                <p className='opacity-60 text-[1.4vh] leading-3 w-30'>Towards Kashmere Gate Platform 2</p>
-                            </div> */}
+                    {/* Metro Staions */}
+                    <div className="relative rounded-2xl border border-white/0 bg-white/0 flex justify-between items-start">
+                        <div>
+                            {line.stations.map((station, j) => (
+                                <div key={j} className={`Stations-List flex justify-between items-center px-2 ${j === 0 ? 'pt-0.5' : ''} ${j === line.stations.length - 1 ? 'border-b-0 pb-0.5' : 'border-b border-white/0 '}`}>
+
+                                    <div className='flex items-center gap-1'>
+                                        <div className='w-4 h-4 rounded-full relative '>
+                                            <div className={`Line w-[1vh] h-[1vh] absolute z-9999 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#161616] ${j === 0 ? 'bg-transparent' : ''} ${j === line.stations.length - 1 ? 'bg-transparent' : ''}`}></div>
+                                            <div style={{ backgroundColor: line.lineColor }} className={`Line w-[0.2vh] absolute top-1/2 left-1/2 -translate-x-1/2 ${j === line.stations.length - 1 ? '' : 'h-6'}`}></div>
+                                            <div style={{ backgroundColor: line.lineColor || '#FFFFFF' }} className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1.5vh] h-[1.5vh] rounded-full`}></div>
+                                        </div>
+                                        <p className='text-white'>{station.name}</p>
+                                    </div>
+
+                                </div>
+                            ))}
                         </div>
 
-
-                        {isInterchange && (
-                            < div className='my-3' >
-                                <span className='border border-white/20 text-[1.6vh] bg-gray-00/20 px-3 py-1 rounded-2xl ml-18 '>Interchange Change to {nextStation.lineColorName}</span>
-                            </div>
-                        )}
+                        <div className='p-1.5 borde border-white/10 bg-white/0 rounded-[1vh] w-25 top-0 right-0 text-right'>
+                            <h1 className='text-white/60 text-[1.4vh]'>Towards</h1>
+                            <h1 className='text-blue-500 text-[1.6vh] leading-3.5'> {line.platforms.from}</h1>
+                        </div>
                     </div>
-                )
-            })}
+
+                    {/* Change Metro */}
+                    <div className='flex justify-between items-center rounded-[1.2vh] p-2 border bg-white/2 border-white/10'>
+                        <div className='flex items-center gap-1 opacity-70'>
+                            <img src="icons/lineChange.png" className='h-5' />
+                            <h1 className='text-[1.6vh]'>Change Metro</h1>
+                        </div>
+
+                        <div className='text-[1.6vh]'>
+                            <span className='text-center opacity-70'>Move Towards </span>
+                            <span className='font-bold'>{line.line}</span>
+                        </div>
+                    </div>
+
+                </div>
+            ))}
         </div >
     )
 }

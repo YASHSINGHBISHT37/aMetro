@@ -27,10 +27,10 @@ const App = () => {
         {/* <Home /> */}
 
 
-        {/* <Details /> */}
+        <Details />
         <MainNav />
 
-        <Info/>
+        {/* <Info/> */}
 
 
         <Footer/>

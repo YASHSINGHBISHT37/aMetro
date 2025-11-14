@@ -8,7 +8,7 @@ const Info = () => {
     return (
         <div className='w-full min-h-screen max-h-auto bg-[#161616] backdrop-blur-[2vh] relative pt-14 px-2 space-y-10 pb-30'>
             {metroData.map((line) => (
-                <div key={line.line} className='space-y-5 border pt-4 pb-2 px-2 rounded-3xl border-white/20'>
+                <div key={line.line} className='space-y-5 borde pt-4 pb-2 px-2 rounded-3xl border-white/20'>
 
                     <div className='flex items-center gap-3 pl-2'>
                         <img src="icons/metro.png" className='opacity- h-8'/>
@@ -26,9 +26,9 @@ const Info = () => {
 
 
 
-                    <div className='flex justify-around'>
+                    <div className='flex justify-around gap-0-2'>
                         {line.details.map((detail, i) => (
-                            <div key={i} className='-space-y-1 flex flex-col items-center'>
+                            <div key={i} className='-space-y-1 flex flex-col items-center w-20'>
                                 <h1 className='font-bold text-[2.2vh]'>{detail.data}</h1>
                                 <p className='opacity-70 text-[1.6vh]'>{detail.label}</p>
                             </div>

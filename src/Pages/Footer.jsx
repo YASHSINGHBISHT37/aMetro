@@ -9,7 +9,7 @@ const Footer = () => {
 
     ]
     return (
-        <div className='relative w-full h-auto p-2 '>
+        <div className='relative w-full h-auto p-2'>
 
             <div className='bg-white/2  rounded-2xl p-4 border border-white/7'>
                 <div className='flex items-center gap-2.5'>
@@ -26,13 +26,13 @@ const Footer = () => {
                 </div>
 
                 <div className='border-t border-white/30 pt-3'>
-                    <p>DMRC Helpline no. <br />
-                        155370 <span className='font-bold'>( This call is chargeable as per calling party pay basis. ) </span> <br />
-                        CISF Helpline no.
-                        155655</p>
+                    <p className='opacity-60'>DMRC Helpline no.</p>
+                    <p className='font-bold leading-3.5'>155370<span className='text-[1.4vh]'> (This call is chargeable as per calling party pay basis.)</span></p>
+                    <p className='opacity-60 mt-2'>CISF Helpline no.</p>
+                    <p className='leading-3.5'>155655</p>
                 </div>
 
-                <div className='text mt-4 flex items-center justify-between opacity-70 text-[1.4vh]'>
+                <div className='text mt-4 flex items-center justify-between opacity-70 text-[1.4vh] borde'>
                     <h1>© 2025 . All rights are reserved</h1>
                     <h1>Devloped by Yash Singh Bisht</h1>
                 </div>

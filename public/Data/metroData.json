@@ -148,7 +148,7 @@
     { "name": "Rajiv Chowk", "connect": [{"line": "Yellow Line"}] },
     { "name": "Barakhamba" },
     { "name": "Mandi House", "connect": [{"line": "Violet Line"}] },
-    { "name": "Supreme Court (Pragati Maidan)" },
+    { "name": "Supreme Court" },
     { "name": "Indraprastha" },
     { "name": "Yamuna Bank" },
     { "name": "Akshardham" },
@@ -458,17 +458,17 @@
       "to": "Phase-3"
     },
     "stations": [
-      { "name": "Sector 55-56 (Rapid Metro)" },
-      { "name": "Sector 54 Chowk (Rapid Metro)" },
-      { "name": "Sector 53-54 (Rapid Metro)" },
-      { "name": "Sector 42-43 (Rapid Metro)" },
-      { "name": "DLF Phase 1 (Rapid Metro)" },
-      { "name": "Sikandarpur (Rapid Metro)", "connect": [{"line": "Yellow Line"}] },
-      { "name": "DLF Phase 2 (Rapid Metro)" },
-      { "name": "Belvedere Towers (Rapid Metro)" },
-      { "name": "Cyber City (Rapid Metro)" },
-      { "name": "Moulsari Avenue (Rapid Metro)" },
-      { "name": "DLF Phase 3 (Rapid Metro)" }
+      { "name": "Sector 55-56" },
+      { "name": "Sector 54 Chowk" },
+      { "name": "Sector 53-54" },
+      { "name": "Sector 42-43" },
+      { "name": "DLF Phase 1" },
+      { "name": "Sikandarpur", "connect": [{"line": "Yellow Line"}] },
+      { "name": "DLF Phase 2" },
+      { "name": "Belvedere Towers" },
+      { "name": "Cyber City" },
+      { "name": "Moulsari Avenue" },
+      { "name": "DLF Phase 3" }
     ]
   },
   {
