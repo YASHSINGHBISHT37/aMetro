@@ -38,7 +38,7 @@ const Route = () => {
                             ))}
                         </div>
 
-                        <div className='p-1.5 borde border-white/10 bg-white/0 rounded-[1vh] w-25 top-0 right-0 text-right'>
+                        <div className='p-1.5 borde border-white/10 bg-white/0 rounded-[1vh] w-19 top-0 right-0 text-right'>
                             <h1 className='text-white/60 text-[1.4vh]'>Towards</h1>
                             <h1 className='text-blue-500 text-[1.6vh] leading-3.5'> {line.platforms.from}</h1>
                         </div>
