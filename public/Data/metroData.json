@@ -2,7 +2,7 @@
   {
     "lineNo": 1,
     "line": "Red Line",
-    "lineColor": "#C53539",
+    "lineColor": "#C0292D",
     "details": [
       {"label":"Km","data": "33.48"},
       {"label":"Rupees","data": 64},
@@ -49,7 +49,7 @@
 {
   "lineNo": 2,
   "line": "Yellow Line",
-  "lineColor": "#FFD700",
+  "lineColor": "#F6D71A",
   "details": [
     { "label": "Km", "data": "47.25" },
     { "label": "Rupees", "data": 64 },
@@ -104,7 +104,7 @@
 {
   "lineNo": 3,
   "line": "Blue Line",
-  "lineColor": "#0078D7",
+  "lineColor": "#3A77C0",
   "details": [
     { "label": "Km", "data": "55.56" },
     { "label": "Rupees", "data": 64 },
@@ -172,7 +172,7 @@
 {
   "lineNo": 4,
   "line": "Blue Line (Branch)",
-  "lineColor": "#0078D7",
+  "lineColor": "#3A77C0",
   "details": [
     { "label": "Km", "data": "8.23" },
     { "label": "Rupees", "data": 32 },
@@ -198,7 +198,7 @@
 {
   "lineNo": 5,
   "line": "Green Line",
-  "lineColor": "#4CAF50",
+  "lineColor": "#55AB54",
   "details": [
     { "label": "Km", "data": "27.96" },
     { "label": "Rupees", "data": 54 },
@@ -240,7 +240,7 @@
 {
   "lineNo": 6,
   "line": "Violet Line",
-  "lineColor": "#8E24AA",
+  "lineColor": "#8115FF",
   "details": [
     { "label": "Km", "data": "45" },
     { "label": "Rupees", "data": 64 },
@@ -292,7 +292,7 @@
 {
   "lineNo": 7,
   "line": "Pink Line",
-  "lineColor": "#E91E63",
+  "lineColor": "#EC90C9",
   "details": [
     { "label": "Km", "data": "57.49" },
     { "label": "Rupees", "data": 43 },
@@ -355,7 +355,7 @@
 {
   "lineNo": 8,
   "line": "Magenta Line",
-  "lineColor": "#C2185B",
+  "lineColor": "#FF01FE",
   "details": [
     { "label": "Km", "data": "36.46" },
     { "label": "Rupees", "data": 64 },
@@ -398,7 +398,7 @@
 {
   "lineNo": 9,
   "line": "Grey Line",
-  "lineColor": "#000000",
+  "lineColor": "#808181",
   "details": [
     {"label": "Km", "data": "4.98"},
     {"label": "Rupees", "data": 21},
@@ -420,7 +420,7 @@
   {
     "lineNo": "N/A",
     "line": "Airport Express",
-    "lineColor": "#FFA500",
+    "lineColor": "#F46909",
     "details": [
       {"label": "Km", "data": "24.9"},
       {"label": "Rupees", "data": 75},
