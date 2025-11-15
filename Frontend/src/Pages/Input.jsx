@@ -35,7 +35,7 @@ const Input = () => {
 
     return (
         <AnimatePresence>
-            <div className='w-full h-auto p-4 bg-[#161616]'>
+            <div className='w-full h-auto p-4'>
 
                 <div className='px-6 space-y-2 relative'>
                     <div className="Bar absolute left-10.5 top-8.5 h-7 bg-white/70 w-[0.15vh] z-9999"></div>
@@ -102,6 +102,28 @@ const Input = () => {
                                     </div>
                                 ))}
                             </div> */}
+
+                        <div className="fromSuggestion absolute -top-1 w-full h-50 bg-[#161616] border border-white/30 rounded- z-99 overflow-y-scroll">
+                            <div className='flex justify-between items-center px-2 py-2'>
+                                <h1></h1>
+                                <img src="icons/close.png" className='h-5 cursor-pointer' />
+                            </div>
+                            {metroData.map((line, i) => (
+                                <div key={i} className={`flex flex-col w-full ${i === metroData.length - 1 ? '' : 'border-b border-white/30'}`}>
+
+                                    {line.stations.slice().sort((a, b) => a.name.localeCompare(b.name)).map((station, j, arr) => (
+                                        <div key={j} className={`flex justify-between items-center px-3 active:bg-gray-400/14 cursor-pointer  ${j === arr.length - 1 ? '' : 'border-b border-white/30'}`}>
+                                            <div className='flex items-center gap-3'>
+                                                <div className="w-2.5 h-2.5 rounded-2xl" style={{ backgroundColor: line.lineColor }}></div>
+                                                <h1>{station.name}</h1>
+                                            </div>
+                                        </div>
+                                    ))}
+
+
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     <motion.div

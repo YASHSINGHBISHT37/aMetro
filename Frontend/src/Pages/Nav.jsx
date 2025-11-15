@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Nav = () => {
     const [menu, setMenu] = useState(false)
+    const [fromToBar, setFromToBar] = useState(false)
 
     const Menu = [
         { label: 'Home' },
@@ -15,6 +16,13 @@ const Nav = () => {
         { label: "FAQ's" }
     ]
 
+
+    useEffect(() => {
+        const scroll = () => setFromToBar(window.scrollY > 38)
+        window.addEventListener('scroll', scroll)
+        return () => window.removeEventListener('scroll', scroll)
+    }, [])
+
     return (
         <div className='bg-[#161616] w-full h-14 fixed top-0 left-0 p-2 flex justify-between items-center z-99999'>
 
@@ -26,7 +34,8 @@ const Nav = () => {
                 </div>
             </div> */}
 
-            <div className='w-full h-full flex justify-between items-center'>
+            <div className={`w-full h-full flex justify-between items-center transition-all duration-400 ease-in-out
+            ${fromToBar ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
                 <div className='w-full h-full flex items-center'>
                     <img src="imgs/Metro.png" className='h-full p-2' />
                     <h1 className='font-bold text-[2.4vh] cursor-pointer'>Delhi Metro</h1>
@@ -34,14 +43,18 @@ const Nav = () => {
 
                 <img onClick={() => setMenu(true)} src="icons/menu.png" className='h-6 cursor-pointer active:opacity-60   ' />
             </div>
-            {/* <div className='Station leading-5 font-bold tracking-wide text-[2vh]relative'>
+
+            {/*From-To-Bar*/}
+            <div className={`Station absolute left-0 top-0 w-full h-full leading-5 font-bold tracking-wide text-[2vh] transition-all duration-400 ease-in-out flex justify-center items-center
+                ${fromToBar ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}>
                 <div className='flex items-center justify-around w-full'>
                     <span className='text-left w-[45%] break-word pr-3'>Sir Vishweshwaraiah Moti Bagh</span>
                     <img src="icons/arrow.png" className=' absolute h-7 mx-2 ml-3 rotate-90 border rounded-full border-white/30 p-1 bg-blue-500' />
                     <h1 className='text-right w-[45%] break-word pl-4'>Hazrat  Nizzamuddin Railway Station</h1>
                 </div>
-            </div> */}
+            </div>
 
+            {/*Menu*/}
             <AnimatePresence>
                 {menu && (
                     <div className='fixed w-full h-full top-0 right-0 px-2 py-2 flex justify-end items-end'>
@@ -62,41 +75,43 @@ const Nav = () => {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: "100%", opacity: 1 }}
                             transition={{ type: "spring", stiffness: 120, damping: 20 }}
-                            className='bg-[#161616] w-full h-auto py-3 rounded-3xl border border-white/20 relative z-9999999'>
+                            className='bg-[#161616] w-full h-80 py-3 rounded-3xl border border-white/20 relative z-9999999 flex flex-col justify-between'>
 
-                            <div className="flex justify-between items-center px-4 pb-2 overflow-auto border-b border-white/30">
-                                <motion.h1
-                                    key='Menu'
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: 50 }}
-                                    transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.1 }}
+                            <div>
+                                <div className="flex justify-between items-center px-4 pb-2 overflow-auto border-b border-white/30">
+                                    <motion.h1
+                                        key='Menu'
+                                        initial={{ opacity: 0, y: 50 }}
+                                        animate={{ opacity: 0.8, y: 0 }}
+                                        exit={{ opacity: 0, y: 50 }}
+                                        transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.1 }}
 
-                                    className="text-2xl">Menu</motion.h1>
-                                <motion.img
-                                    initial={{ opacity: 0, x: 30, rotate: 180 }}
-                                    animate={{ opacity: 1, x: 0, rotate: 0 }}
-                                    exit={{ opacity: 0, x: 30, rotate: 180 }}
-                                    transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.1 }}
+                                        className="text-2xl font-bold">Menu</motion.h1>
+                                    <motion.img
+                                        initial={{ opacity: 0, x: 30, rotate: 180 }}
+                                        animate={{ opacity: 1, x: 0, rotate: 0 }}
+                                        exit={{ opacity: 0, x: 30, rotate: 180 }}
+                                        transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.1 }}
 
-                                    onClick={() => setMenu(false)}
-                                    src="icons/close.png"
-                                    className="cursor-pointer h-6" />
-                            </div>
+                                        onClick={() => setMenu(false)}
+                                        src="icons/close.png"
+                                        className="cursor-pointer h-6" />
+                                </div>
 
-                            <div className='mt-3 px-4 pb-10 -space-y-1'>
-                                {Menu.map((item, i) => (
-                                    <div className='overflow-hidden'>
-                                        <motion.h1
-                                            key='Menu'
-                                            initial={{ opacity: 0, x: -110 }}
-                                            animate={{ opacity: 1, x: 0 }}
-                                            exit={{ opacity: 0, x: -110 }}
-                                            transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.1 }}
-                                        >{item.label}</motion.h1>
-                                    </div>
-                                ))}
+                                <div className='mt-3 px-4 pb-10 -space-y-1 '>
+                                    {Menu.map((item, i) => (
+                                        <div className='overflow-hidden'>
+                                            <motion.h1
+                                                key='Menu'
+                                                initial={{ opacity: 0, x: -110 }}
+                                                animate={{ opacity: 1, x: 0 }}
+                                                exit={{ opacity: 0, x: -110 }}
+                                                transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.1 }}
+                                                className='active:text-blue-500'>{item.label}</motion.h1>
+                                        </div>
+                                    ))}
 
+                                </div>
                             </div>
 
                             <div className='text mt-4 flex items-center justify-between opacity-60 text-[1.4vh] border-t border-white/20 pt-2  px-4'>

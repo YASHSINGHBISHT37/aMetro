@@ -6,6 +6,7 @@ import Info from './Pages/Info'
 import Home from './Pages/Home'
 import metroData from '../public/Data/metroData.json'
 import Footer from './Pages/Footer'
+import MetroAni from './Pages/metroAni'
 
 const App = () => {
   const metroLines = []
@@ -25,17 +26,14 @@ const App = () => {
 
         <Nav />
         {/* <Home /> */}
-
-
         <Details />
         <MainNav />
 
         {/* <Info/> */}
 
 
-        <Footer/>
-
-
+        <MetroAni />
+        <Footer />
       </div>
     </div>
   )

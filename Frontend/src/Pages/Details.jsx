@@ -6,9 +6,9 @@ import metroData from '../../public/Data/metroData.json'
 const Details = () => {
     const data = [
         { label: 'Fare', data: '₹43', img: 'fare.png' },
-        { label: 'Time', data: '129 min', img: 'time.png' },
         { label: 'Stations', data: '14', img: 'stations.png' },
-        { label: 'Line Change', data: '3', img: 'lineChange.png' },
+        { label: 'InterChange', data: '3', img: 'lineChange.png' },
+        // { label: 'Time', data: '129 min', img: 'time.png' },
         // { label: 'Last', data: '11:02 Pm' },
         // { label: 'Phone', data: '8800793133' },
     ]
@@ -17,15 +17,14 @@ const Details = () => {
     const [highLight, setHightLight] = useState('time')
 
     return (
-        <div className='relative w-full h-auto bg-[#161616] pb-30 px-2 pt-2'>
+        <div className='relative w-full h-auto bg-[#161616] pb-30 px-2'>
             <div className='h-full overflow-scroll'>
 
-                <div className='Station leading-5 font-bold tracking-wide text-[2vh] mb-8 relative'>
+                <div className='Station leading-5 font-bold tracking-wide text-[2vh] mb-8 bg-[#161616]flex items-center justify-center h-14'>
                     <div className='flex items-center justify-around w-full'>
                         <span className='text-left w-[45%] break-word pr-3'>Sir Vishweshwaraiah Moti Bagh</span>
                         <img src="icons/arrow.png" className=' absolute h-7 mx-2 ml-3 rotate-90 border rounded-full border-white/30 p-1 bg-blue-500' />
                         <h1 className='text-right w-[45%] break-word pl-4'>Hazrat  Nizzamuddin Railway Station</h1>
-
                     </div>
                 </div>
 
@@ -48,15 +47,17 @@ const Details = () => {
                     </div>
                 </div>
 
-                <div className='Data flex flex-wrap items-center justify-between gap-2 px-2 mb-4'>
+                <div className='Data flex flex-nowrap items-center justify-between gap-2 px-2 mb-4'>
                     {data.map((item, i) => (
-                        <div key={i} className='flex items-center space-x-1 px-3 text-[1.7vh] py-1.5 border border-white/10 rounded-[1.2vh] w-46 h-16 bg-gray-400/7'>
-                            <img src={`icons/${item.img}`} className=' borde o border-white/30 p-2 w-10 h-10 opacity' />
+
+                        <div key={i} className='flex items-center justify-center space-x-2 pr-3 py-1 text-[1.7vh] border border-white/10 rounded-[1.2vh] w-30 bg-gray-400/7'>
+                            <img src={`icons/${item.img}`} className='p-2 w-10 h-10 opacity borde' />
                             <div className='leading-5.5'>
-                                <h1 className='text-[2.2vh]'>{item.data}</h1>
-                                <h1 className='font-bold opacity-60'>{item.label}</h1>
+                                <h1 className='text-[1.9vh] font-bold '>{item.data}</h1>
+                                <h1 className='text-[1.6vh] opacity-60'>{item.label}</h1>
                             </div>
                         </div>
+
                     ))}
                 </div>
 
@@ -71,7 +72,7 @@ const Details = () => {
 
 
 
-                
+
 
 
                 {/* <div className='px-10 flex justify-center items-center'>
