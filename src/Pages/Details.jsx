@@ -1,7 +1,7 @@
 import { div } from 'framer-motion/client'
 import React, { useState } from 'react'
 import Route from '../Components/Details/Route'
-import metroData from '../../Frontend/public/Data/metroData.json'
+import metroData from '../../public/Data/metroData.json'
 
 const Details = () => {
     const data = [

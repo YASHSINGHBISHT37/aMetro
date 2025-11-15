@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import metroData from '../../Frontend/public/Data/metroData.json'
+import metroData from '../../public/Data/metroData.json'
 
 const Input = () => {
     const [from, setFrom] = useState('')

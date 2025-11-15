@@ -4,7 +4,7 @@ import MainNav from './Pages/MainNav'
 import Details from './Pages/Details'
 import Info from './Pages/Info'
 import Home from './Pages/Home'
-import metroData from '../Frontend/public/Data/metroData.json'
+import metroData from '../public/Data/metroData.json'
 import Footer from './Pages/Footer'
 import MetroAni from './Pages/metroAni'
 

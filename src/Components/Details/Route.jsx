@@ -1,6 +1,6 @@
 import React from 'react'
-import metroData from '../../../Frontend/public/Data/metroData.json'
-import metroColors from '../../../Frontend/public/Data/metroColors.json'
+import metroData from '../../../public/Data/metroData.json'
+import metroColors from '../../../public/Data/metroColors.json'
 
 const Route = () => {
 
