@@ -20,8 +20,8 @@ const Footer = () => {
 
                 <h1 className='mt-6 font-bold text-[2.2vh] opacity-60'>Quick Links</h1>
                 <div className='pb-4'>
-                    {footer.map((f) => (
-                        <h1 className='cursor-pointer hover:text-blue-500 active:text-blue-500 leading-5.5'>{f.label}</h1>
+                    {footer.map((f,i) => (
+                        <h1 key={i} className='cursor-pointer hover:text-blue-500 active:text-blue-500 leading-5.5'>{f.label}</h1>
                     ))}
                 </div>
 

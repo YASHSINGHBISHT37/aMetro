@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 const MetroAni = () => {
     return (
-        <div>
+        <div className='w-full h-auto relative z-99999'>
             {/*Metro Animation*/}
             <AnimatePresence>
                 <div className='h-26 bg-amber-00 overflow-hidden relative'>
