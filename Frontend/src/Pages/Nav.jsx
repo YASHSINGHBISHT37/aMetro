@@ -30,7 +30,7 @@ const Nav = () => {
                 <div className='flex flex-col items-center gap-4 w-full'>
                     <img src="imgs/Metro.png" className='h-40 mb-2' />
                     <h1 className='font-bold text-[2vh] opacity-70'>Welcome to</h1>
-                    <h1 className='font-bold text-4xl leading-0'>Delhi Metro</h1>
+                    <h1 className='font-bold text-4xl leading-0'>Delhi Metro</h1> 
                 </div>
             </div> */}
 
