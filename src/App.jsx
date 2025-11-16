@@ -25,8 +25,10 @@ const App = () => {
       <div className=''>
 
         <Nav />
-        {/* <Home /> */}
-        <Details />
+        <MetroAni />
+
+        <Home />
+        {/* <Details /> */}
         <MainNav />
 
         {/* <Info/> */}

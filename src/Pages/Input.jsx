@@ -103,7 +103,7 @@ const Input = () => {
                                 ))}
                             </div> */}
 
-                        <div className="fromSuggestion absolute -top-1 w-full h-50 bg-[#161616] border border-white/30 rounded- z-99 overflow-y-scroll">
+                        {/* <div className="fromSuggestion absolute -top-1 w-full h-50 bg-[#161616] border border-white/30 rounded- z-99 overflow-y-scroll">
                             <div className='flex justify-between items-center px-2 py-2'>
                                 <h1></h1>
                                 <img src="icons/close.png" className='h-5 cursor-pointer' />
@@ -123,7 +123,7 @@ const Input = () => {
 
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
 
                     <motion.div
