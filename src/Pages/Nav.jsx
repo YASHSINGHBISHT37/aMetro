@@ -18,7 +18,7 @@ const Nav = () => {
 
 
     useEffect(() => {
-        const scroll = () => setFromToBar(window.scrollY > 38)
+        const scroll = () => setFromToBar(window.scrollY > 50)
         window.addEventListener('scroll', scroll)
         return () => window.removeEventListener('scroll', scroll)
     }, [])
@@ -133,7 +133,7 @@ const Nav = () => {
                                         exit={{ opacity: 0, y: 50 }}
                                         transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.1 }}
                                         className='cursor-pointer active:text-blue-500'>
-                                        Devloped by Yash Singh Bisht</motion.h1>
+                                        Developed by Yash Singh Bisht</motion.h1>
                                 </div>
                             </div>
                         </motion.div>

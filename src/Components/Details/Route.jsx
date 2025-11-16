@@ -10,14 +10,14 @@ const Route = () => {
                 <div key={line.line} className='space-y-5 pt-4 pb-2'>
 
 
-                    <div className='flex justify-around gap-0-2'>
+                    {/* <div className='flex justify-around gap-0-2'>
                         {line.details.map((detail, i) => (
                             <div key={i} className='-space-y-1 flex flex-col items-center w-20'>
                                 <h1 className='font-bold text-[2.2vh]'>{detail.data}</h1>
                                 <p className='opacity-70 text-[1.6vh]'>{detail.label}</p>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
 
                     {/* Metro Staions */}
                     <div className="relative rounded-2xl border border-white/0 bg-white/0 flex justify-between items-start">

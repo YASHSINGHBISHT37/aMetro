@@ -20,7 +20,8 @@ const Details = () => {
         <div className='relative w-full h-auto bg-[#161616] pb-30 px-2'>
             <div className='h-full overflow-scroll'>
 
-                <div className='Station leading-5 font-bold tracking-wide text-[2vh] mb-8 bg-[#161616]flex items-center justify-center h-14'>
+                {/* From-To */}
+                <div className='Station leading-5 font-bold tracking-wide text-[2vh] mb-8 bg-[#161616]flex items-center justify-center h-auto mt-3'>
                     <div className='flex items-center justify-around w-full'>
                         <span className='text-left w-[45%] break-word pr-3'>Sir Vishweshwaraiah Moti Bagh</span>
                         <img src="icons/arrow.png" className=' absolute h-7 mx-2 ml-3 rotate-90 border rounded-full border-white/30 p-1 bg-blue-500' />
@@ -28,7 +29,8 @@ const Details = () => {
                     </div>
                 </div>
 
-                <div className='flex justify-center items-center my-4'>
+                {/*ShorestRoute & InterChange*/}
+                <div className='flex justify-center items-center mb-6'>
                     <div className='relative flex justify-between items-center text-[1.7vh] border p-1.5 py-6 w-100 h-11 rounded-[1.2vh] border-white/10 overflow-auto'>
                         <div className={`highLight bg-blue-500 border border-white/20 rounded-[0.8vh] w-1/2 h-9 -translate-y-1/2 absolute top-1/2 left-1.5 transition-all duration-400 ease-in-out
                             ${highLight === 'lineChange' ? 'translate-x-46' : 'translate-x-0'}`}></div>
@@ -37,7 +39,8 @@ const Details = () => {
                     </div>
                 </div>
 
-                <div className='flex justify-between items-center px-2'>
+                {/* Time */}
+                <div className='flex justify-between items-center px-2 mb-2'>
                     <div>
                         <h1 className='text-[2vh]'>11:03 PM - 12:07 AM</h1>
                     </div>
@@ -61,6 +64,7 @@ const Details = () => {
                     ))}
                 </div>
 
+                {/* Note */}
                 <div className='border-y border-white/20 py-3 px-2 space-y-2'>
                     <p className='text-[1.2vh] opacity-70'><span className='text-red-500'>* </span>This is a single journey token fare. Use smart card to avail discounts.</p>
                     <div className='rounded-[0.8vh] border border-white/3 bg-white/2 p-2'>
@@ -70,21 +74,7 @@ const Details = () => {
                     </div>
                 </div>
 
-
-
-
-
-
-                {/* <div className='px-10 flex justify-center items-center'>
-                    <div className='relative flex justify-between items-center text-[1.7vh] border p-1.5 w-72 h-11 rounded-full border-white/20 overflow-auto'>
-                        <div className={`highLight bg-blue-500 border border-white/20 rounded-full w-1/2 h-8 -translate-y-1/2 absolute top-1/2 left-1.5 transition-all duration-400 ease-in-out
-                            ${highLight === 'lineChange' ? 'translate-x-33' : 'translate-x-0'}`}></div>
-                        <h1 onClick={() => setHightLight('time')} className='relative w-34 text-center cursor-pointer'>Shortest Route</h1>
-                        <h1 onClick={() => setHightLight('lineChange')} className='relative w-34 text-center cursor-pointer'>Min. Interchange</h1>
-                    </div>
-                </div>
-
-                <div className='Buttons w-full flex justify-center items-center space-x-2 mt-4'>
+                {/* <div className='Buttons w-full flex justify-center items-center space-x-2 mt-4'>
 
                     <div className="Route border border-white/30 active:scale-95 transition-all ease-in-out rounded-[1.2vh] text-center w-auto px-3 bg-blue-500 active:bg-blue-600/ cursor-pointer">
                         <p>Route</p>

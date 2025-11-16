@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     const footer = [
         { label: 'Home' },
-        { label: 'Feeddback' },
+        { label: 'Feedback' },
         { label: 'Disclaimer' },
         { label: 'helpline@dmrc.org' },
         { label: 'Privacy Policy' },
@@ -34,7 +34,7 @@ const Footer = () => {
 
                 <div className='text mt-2 flex items-center justify-between opacity-70 text-[1.4vh] borde'>
                     <h1>© 2025 . All rights are reserved</h1>
-                    <h1>Devloped by Yash Singh Bisht</h1>
+                    <h1>Developed by Yash Singh Bisht</h1>
                 </div>  
             </div>
 
